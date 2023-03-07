@@ -1,30 +1,40 @@
-import java.util.Locale;
 import java.util.Scanner;
 
 public class testing {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Locale.setDefault(Locale.US);
-		System.out.println("Abaixo coloque se nome, idade,salário e seu sexo");
+		Scanner sc =  new Scanner(System.in);
 		
-		Scanner formu =  new Scanner(System.in);
-		String nome;
-		int idade;
-		Double salario;
-		char sexo;
 		
-		nome = formu.nextLine();
-		idade = formu.nextInt();
-		salario = formu.nextDouble();
-		sexo = formu.next().charAt(0);
-		System.out.println("Nome : " + nome);
-		System.out.println("idade : " + idade);
-		System.out.println("salário : "+ salario);
-		System.out.println("sexo é : " + sexo);
+		double a,l,c,p,Total ;
+		
+		
+		System.out.println("informe a largura: ");
+		l = sc.nextDouble();
+		System.out.println(l);
+		
+		System.out.println("informe o comprimento");
+		c = sc.nextDouble();
+		System.out.println(c);
+		
+		a = l* c;
+		System.out.println("sua área é de : ");
+		System.out.println(a);
+		
+		System.out.println("para saber o valor  da área total indique o valor o m quadrado");
+		p = sc.nextDouble();
+		
+		Total = p*a;
+		
+		System.out.println("o valor total é " + Total);
+	
+		sc.close();
+		
+		
 				
-		formu.close();
 		
+	
 	}
 
 }
